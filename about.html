@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Probity Partners East Africa</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body class="font-montserrat">
+    <!-- Top Bar with Contact Info -->
+    <div class="top-bar py-2">
+      <div class="container">
+        <div class="d-flex justify-content-end align-items-center">
+          <div class="contact-info d-flex align-items-center gap-3">
+            <a href="mailto:probitypartnersea1@gmail.com" class="contact-link">
+              <i class="bi bi-envelope-fill"></i>
+              <span>probitypartnersea1@gmail.com</span>
+            </a>
+            <a href="tel:+250791676618" class="contact-link">
+              <i class="bi bi-telephone-fill"></i>
+              <span>+250 791 676 618/ +250 788 561 313</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header fixed-top" role="banner">
+      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="/" aria-label="PPEA Home">
+            <img
+              src="assets/logo4.png"
+              alt="PPEA Logo"
+              class="logo-img"
+              width="180"
+              height="48"
+            />
+          </a>
+
+          <!-- Mobile Toggle Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation Content -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Main Menu -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="about.html" aria-current="page"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Practice Areas</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="ourPeopleDropdown"
+                >
+                  Our People
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="ourPeopleDropdown">
+                  <li>
+                    <a class="dropdown-item" href="attorneys.html">Attorneys</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="consultants.html"
+                      >Consultants</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <!-- Resources Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="resourcesDropdown"
+                >
+                  Resources
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                  <li>
+                    <a class="dropdown-item" href="/resources/cases">Cases</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/resources/brochures"
+                      >Brochures</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/resources/reports"
+                      >Reports</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Blog Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="blogDropdown"
+                >
+                  Blog
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                  <li>
+                    <a class="dropdown-item" href="/blog/news">News</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/blog/articles">Articles</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <!-- Search and CTA -->
+            <div class="d-flex align-items-center gap-3">
+              <button
+                class="btn search-btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#searchModal"
+                aria-label="Search"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+              <a href="/consultation" class="btn cta-button" role="button">
+                Consult with Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero" aria-label="About Hero">
+      <div class="about-hero-background">
+        <div class="about-hero-overlay"></div>
+        <img
+          src="assets/about-hero.jpg"
+          alt="Probity Partners East Africa office"
+          class="about-hero-image"
+        />
+      </div>
+      <div class="container">
+        <div class="about-hero-content" data-aos="fade-up">
+          <h1 class="about-hero-title">Our Identity</h1>
+          <p class="about-hero-subtitle">
+            A regional law firm serving East Africa with excellence and
+            integrity
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Identity Statement Section -->
+    <section class="identity-statement py-5" aria-label="Identity Statement">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10" data-aos="fade-up">
+            <div class="content-card p-4 p-md-5">
+              <p class="lead mb-4">
+                Probity Partners East Africa (PPEA), formerly known as Bona Fide
+                Law Chambers, is a regional law firm serving East Africa. The
+                firm, headquartered in Kigali, Rwanda, was established in 2011.
+                PPEA is composed of a multi-lingual, multi-disciplinary group of
+                professionals with vast experience in the fields of Access to
+                Justice, Rule of Law, Human Rights, Good Governance and Legal
+                Aid from the region and around the world.
+              </p>
+              <p class="mb-4">
+                PPEA boasts a team of highly educated and highly efficient
+                attorneys and consultants and guarantees the timely completion
+                of the highest standard of work. Our approach is human rights
+                based and we are solution-oriented and pragmatic. We also boast
+                expertise in civil and criminal litigation, legal advice and
+                assistance and research through data collection and analysis. We
+                also advice CSOs and development partners on a number of legal
+                issues pertaining to legal and policy frameworks in Rwanda.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission and Vision Section -->
+    <section
+      class="mission-vision py-5 bg-light"
+      aria-label="Mission and Vision"
+    >
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="mission-card">
+              <div class="card-icon">
+                <i class="bi bi-bullseye"></i>
+              </div>
+              <h2>Our Mission</h2>
+              <p>
+                Provide our clients with top-notch legal services through legal
+                representation.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="vision-card">
+              <div class="card-icon">
+                <i class="bi bi-eye"></i>
+              </div>
+              <h2>Our Vision</h2>
+              <p>
+                PPEA is committed to strengthening our clients' relationships
+                with current and prospective partners.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="our-values py-5" aria-label="Our Values">
+      <div class="container">
+        <h2 class="section-title text-center mb-5" data-aos="fade-up">
+          Our Core Values
+        </h2>
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h3>Probity & Integrity</h3>
+              <p>
+                To be honest, trustworthy, respectful and ethical in our
+                actions. To honor our commitments and to be accountable for our
+                actions, successes and failures.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="bi bi-person-check"></i>
+              </div>
+              <h3>Client Focus</h3>
+              <p>
+                PPEA fully understand our clients' requirements, challenges,
+                objectives and goals and to maximize the value of our services
+                to our clients including safeguarding the security and
+                confidentiality of their information.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="bi bi-lightbulb"></i>
+              </div>
+              <h3>Intellectual Rigor</h3>
+              <p>
+                To be meticulous in our attention to detail. PPEA extract larger
+                meaning from data and information to support objective
+                evaluation, decision making and innovation.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h3>Collaboration</h3>
+              <p>
+                Through seek, share and respect diverse perspectives and to
+                function as a team with our colleagues, clients and third party
+                providers. To openly communicate all relevant information
+                consistently and constructively.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="bi bi-trophy"></i>
+              </div>
+              <h3>Excellence</h3>
+              <p>
+                PPEA relentlessly pursue delivery of outstanding results in
+                everything we do.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="cta-section py-5 bg-primary text-white"
+      aria-label="Call to Action"
+    >
+      <div class="container text-center">
+        <h2 class="section-title text-white mb-4" data-aos="fade-up">
+          Ready to Work With Us?
+        </h2>
+        <p
+          class="section-subtitle text-white mb-4"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Let's discuss how we can help you achieve your legal objectives.
+        </p>
+        <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+          <a href="/contact" class="btn btn-light btn-lg me-3">Contact Us</a>
+          <a href="/consultation" class="btn btn-outline-light btn-lg"
+            >Book a Consultation</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <img
+              src="assets/logo4.png"
+              alt="PPEA Logo"
+              class="footer-logo mb-4"
+            />
+            <p>
+              Providing exceptional legal services across East Africa with
+              unmatched dedication and expertise.
+            </p>
+            <div class="social-section mt-4">
+              <h6 class="text-white mb-3">Get in touch with us</h6>
+              <div class="social-icons d-flex gap-3">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Facebook">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitter">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Practice Areas</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5>Practice Areas</h5>
+            <ul class="list-unstyled">
+              <li><a href="services.html#insurance">Insurance</a></li>
+              <li><a href="services.html#contracts">Contracts</a></li>
+              <li>
+                <a href="services.html#labour">Labour & Administration</a>
+              </li>
+              <li><a href="services.html#real-estate">Real Estate</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-geo-alt"></i> KG 17 Ave, Kigali, Rwanda</li>
+              <li><i class="bi bi-telephone"></i> +250 791 676 618</li>
+              <li>
+                <i class="bi bi-envelope"></i> probitypartnersea1@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row">
+          <div class="col-md-6">
+            <p class="mb-0">
+              &copy; 2024 Probity Partners East Africa. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="/privacy" class="text-white me-3">Privacy Policy</a>
+            <a href="/terms" class="text-white">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="searchModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="searchModalLabel">Search</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="search-form" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Search..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-primary" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <!-- Initialize Bootstrap Components -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize all dropdowns
+        var dropdownElementList = [].slice.call(
+          document.querySelectorAll(".dropdown-toggle")
+        );
+        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+          return new bootstrap.Dropdown(dropdownToggleEl);
+        });
+
+        // Initialize AOS
+        AOS.init();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Me Mutimura Patrick - PPEA</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/favicon.png" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Top Bar with Contact Info -->
+    <div class="top-bar py-2">
+      <div class="container">
+        <div class="d-flex justify-content-end align-items-center">
+          <div class="contact-info d-flex align-items-center gap-3">
+            <a
+              href="mailto:probitypartnersea1@gmail.com"
+              class="contact-link"
+              style="color: white !important; text-decoration: none"
+            >
+              <i class="bi bi-envelope-fill" style="color: white"></i>
+              <span style="color: white">probitypartnersea1@gmail.com</span>
+            </a>
+            <a
+              href="tel:+250791676618"
+              class="contact-link"
+              style="color: white !important; text-decoration: none"
+            >
+              <i class="bi bi-telephone-fill" style="color: white"></i>
+              <span style="color: white"
+                >+250 791 676 618/ +250 788 561 313</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header fixed-top" role="banner">
+      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="/" aria-label="PPEA Home">
+            <img
+              src="../assets/logo4.png"
+              alt="PPEA Logo"
+              class="logo-img"
+              width="180"
+              height="48"
+            />
+          </a>
+
+          <!-- Mobile Toggle Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation Content -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Main Menu -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+              </li>
+
+              <!-- Practice Areas Menu Item -->
+              <li class="nav-item">
+                <a class="nav-link" href="../services.html">Practice Areas</a>
+              </li>
+
+              <!-- Our People Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Our People
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="ourPeopleDropdown">
+                  <li>
+                    <a class="dropdown-item" href="../attorneys.html"
+                      >Attorneys</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../consultants.html"
+                      >Consultants</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Resources Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Resources
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                  <li>
+                    <a class="dropdown-item" href="/resources/cases">Cases</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/resources/brochures"
+                      >Brochures</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/resources/reports"
+                      >Reports</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Blog Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Blog
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                  <li><a class="dropdown-item" href="/blog/news">News</a></li>
+                  <li>
+                    <a class="dropdown-item" href="/blog/articles">Articles</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <!-- Search and CTA -->
+            <div class="d-flex align-items-center gap-3">
+              <!-- Search Button -->
+              <button
+                class="btn search-btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#searchModal"
+                aria-label="Search"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+
+              <!-- CTA Button -->
+              <a href="/consultation" class="btn cta-button" role="button"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Attorney Profile Section -->
+    <section class="attorney-profile py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Profile Image -->
+          <div class="col-lg-4" data-aos="fade-right">
+            <div class="profile-image-wrapper">
+              <img
+                src="../assets/004.jpg"
+                alt="Mutimura Patrick"
+                class="img-fluid rounded-3 shadow-lg"
+              />
+            </div>
+            <div class="profile-contact mt-4">
+              <h4>Contact Information</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="bi bi-telephone"></i>
+                  <a href="tel:+250791676618">+250 791 676 618</a>
+                </li>
+                <li>
+                  <i class="bi bi-envelope"></i>
+                  <a href="mailto:probitypartnersea1@gmail.com"
+                    >probitypartnersea1@gmail.com</a
+                  >
+                </li>
+              </ul>
+              <div class="social-links mt-3">
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Email">
+                  <i class="bi bi-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Content -->
+          <div class="col-lg-8" data-aos="fade-left">
+            <div class="profile-content">
+              <h1 class="profile-name">Me Mutimura Patrick</h1>
+              <p class="profile-title">Senior Attorney</p>
+
+              <!-- Professional Experience -->
+              <div class="section mb-5">
+                <h3>Professional Experience</h3>
+                <p>
+                  Me Mutimura Patrick is a distinguished attorney with extensive
+                  experience in corporate law and commercial transactions. He
+                  has successfully represented numerous clients in complex legal
+                  matters and has built a reputation for delivering exceptional
+                  results.
+                </p>
+                <p>
+                  His expertise spans across various sectors, including
+                  corporate governance, commercial transactions, and dispute
+                  resolution. He is known for his strategic approach to legal
+                  challenges and his commitment to client success.
+                </p>
+              </div>
+
+              <!-- Education -->
+              <div class="section mb-5">
+                <h3>Education</h3>
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <h5>Master of Laws (LLM)</h5>
+                    <p class="mb-0">Corporate Law</p>
+                  </li>
+                  <li class="mb-3">
+                    <h5>Bachelor of Laws (LLB)</h5>
+                    <p class="mb-0">University of Rwanda</p>
+                  </li>
+                  <li>
+                    <h5>Post Graduate Diploma in Legal Practice</h5>
+                    <p class="mb-0">
+                      Institute of Legal Practice and Development
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Areas of Expertise -->
+              <div class="section mb-5">
+                <h3>Areas of Expertise</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="list-unstyled">
+                      <li>
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i
+                        >Corporate Law
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i
+                        >Commercial Transactions
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i
+                        >Business Law
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="list-unstyled">
+                      <li>
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i
+                        >Corporate Governance
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i
+                        >Legal Strategy
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle-fill text-primary me-2"></i
+                        >Dispute Resolution
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Professional Achievements -->
+              <div class="section mb-5">
+                <h3>Professional Achievements</h3>
+                <ul class="list-unstyled">
+                  <li class="mb-3">
+                    <i class="bi bi-trophy-fill text-primary me-2"></i>
+                    Successfully handled numerous high-profile corporate cases
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-trophy-fill text-primary me-2"></i>
+                    Recognized expert in corporate law and commercial
+                    transactions
+                  </li>
+                  <li>
+                    <i class="bi bi-trophy-fill text-primary me-2"></i>
+                    Consistently delivers exceptional results for clients
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Practice Focus -->
+              <div class="section">
+                <h3>Practice Focus</h3>
+                <p>
+                  Me Mutimura Patrick specializes in providing comprehensive
+                  legal solutions in corporate law and commercial transactions.
+                  His practice encompasses:
+                </p>
+                <ul>
+                  <li>Corporate governance and compliance</li>
+                  <li>Commercial transactions and agreements</li>
+                  <li>Strategic legal advisory</li>
+                  <li>Complex business negotiations</li>
+                  <li>Legal risk management</li>
+                </ul>
+              </div>
+
+              <div class="profile-section">
+                <h2>Languages</h2>
+                <ul>
+                  <li>English</li>
+                  <li>French</li>
+                  <li>Kinyarwanda</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Modal -->
+    <div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="searchModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="searchModalLabel">Search</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="search-form" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Search..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-primary" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <img
+              src="../assets/logo4.png"
+              alt="PPEA Logo"
+              class="footer-logo mb-4"
+            />
+            <p>
+              Providing exceptional legal services across East Africa with
+              unmatched dedication and expertise.
+            </p>
+            <div class="social-section mt-4">
+              <h6 class="text-white mb-3">Get in touch with us</h6>
+              <div class="social-icons d-flex gap-3">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Facebook">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitter">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../services.html">Practice Areas</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5>Practice Areas</h5>
+            <ul class="list-unstyled">
+              <li><a href="../services.html#insurance">Insurance</a></li>
+              <li><a href="../services.html#contracts">Contracts</a></li>
+              <li>
+                <a href="../services.html#labour">Labour & Administration</a>
+              </li>
+              <li><a href="../services.html#real-estate">Real Estate</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-geo-alt"></i> KG 17 Ave, Kigali, Rwanda</li>
+              <li><i class="bi bi-telephone"></i> +250 791 676 618</li>
+              <li>
+                <i class="bi bi-envelope"></i> probitypartnersea1@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row">
+          <div class="col-md-6">
+            <p class="mb-0">
+              &copy; 2024 Probity Partners East Africa. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="../privacy.html" class="text-white me-3">Privacy Policy</a>
+            <a href="../terms.html" class="text-white">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../script.js"></script>
+  </body>
+</html>

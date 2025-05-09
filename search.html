@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results - Probity Partners East Africa</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar py-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-info d-flex gap-3">
+              <a href="tel:+250791676618" class="contact-link">
+                <i class="bi bi-telephone"></i>
+                <span>+250 791 676 618</span>
+              </a>
+              <a
+                href="mailto:probitypartnersea1@gmail.com"
+                class="contact-link"
+              >
+                <i class="bi bi-envelope"></i>
+                <span>probitypartnersea1@gmail.com</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="social-icons d-flex justify-content-end gap-2">
+              <a href="#" class="social-icon" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="Twitter">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img
+              src="assets/logo.png"
+              alt="Probity Partners East Africa"
+              class="logo-img"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/services.html#corporate"
+                      >Corporate & Commercial</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/services.html#litigation"
+                      >Litigation & Dispute Resolution</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/services.html#real-estate"
+                      >Real Estate & Property</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/services.html#intellectual"
+                      >Intellectual Property</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/services.html#employment"
+                      >Employment & Labor</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Team
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="/attorneys.html"
+                      >Attorneys</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/consultants.html"
+                      >Consultants</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Search and CTA -->
+            <div class="d-flex align-items-center gap-3">
+              <!-- Search Button -->
+              <button
+                class="btn search-btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#searchModal"
+                aria-label="Search"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+
+              <!-- CTA Button -->
+              <a href="/consultation" class="btn cta-button" role="button">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Search Results Section -->
+    <section class="search-results py-5" style="margin-top: 76px">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4">Search Results</h1>
+            <div id="searchResults" class="search-results-container">
+              <!-- Search results will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Modal -->
+    <div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="searchModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="searchModalLabel">Search</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="search-form" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Search..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-primary" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <img
+              src="assets/logo.png"
+              alt="Probity Partners East Africa"
+              class="footer-logo mb-4"
+            />
+            <p class="text-white-50">
+              Providing exceptional legal services across East Africa with
+              unmatched dedication and expertise.
+            </p>
+            <div class="social-section">
+              <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Facebook">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitter">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/team.html">Team</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-4">
+            <h5>Practice Areas</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="/services.html#corporate">Corporate & Commercial</a>
+              </li>
+              <li>
+                <a href="/services.html#litigation"
+                  >Litigation & Dispute Resolution</a
+                >
+              </li>
+              <li>
+                <a href="/services.html#real-estate">Real Estate & Property</a>
+              </li>
+              <li>
+                <a href="/services.html#intellectual">Intellectual Property</a>
+              </li>
+              <li>
+                <a href="/services.html#employment">Employment & Labor</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 mb-4">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-geo-alt"></i> KG 17 Ave, Kigali, Rwanda</li>
+              <li>
+                <i class="bi bi-telephone"></i>
+                <a href="tel:+250791676618">+250 791 676 618</a>
+              </li>
+              <li>
+                <i class="bi bi-envelope"></i>
+                <a href="mailto:probitypartnersea1@gmail.com"
+                  >probitypartnersea1@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get search query from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get("q");
+
+        if (searchQuery) {
+          // Update search input in modal
+          const searchInput = document.querySelector(
+            "#searchModal input[type='search']"
+          );
+          if (searchInput) {
+            searchInput.value = searchQuery;
+          }
+
+          // Perform search and display results
+          performSearch(searchQuery);
+        }
+      });
+
+      function performSearch(query) {
+        // This is a simple search implementation
+        // In a real application, you would typically make an API call to your backend
+        const searchResults = document.getElementById("searchResults");
+
+        // Example search results (replace with actual search logic)
+        const results = [
+          {
+            title: "About Us",
+            url: "/about.html",
+            excerpt:
+              "Learn more about Probity Partners East Africa and our mission to provide exceptional legal services.",
+          },
+          {
+            title: "Our Services",
+            url: "/services.html",
+            excerpt:
+              "Explore our comprehensive range of legal services including corporate, litigation, and more.",
+          },
+          {
+            title: "Meet Our Team",
+            url: "/team.html",
+            excerpt:
+              "Get to know our team of experienced attorneys and consultants.",
+          },
+        ];
+
+        // Filter results based on search query
+        const filteredResults = results.filter(
+          (result) =>
+            result.title.toLowerCase().includes(query.toLowerCase()) ||
+            result.excerpt.toLowerCase().includes(query.toLowerCase())
+        );
+
+        // Display results
+        if (filteredResults.length > 0) {
+          searchResults.innerHTML = filteredResults
+            .map(
+              (result) => `
+            <div class="search-result-item mb-4">
+              <h3><a href="${result.url}" class="text-decoration-none">${result.title}</a></h3>
+              <p class="text-muted">${result.excerpt}</p>
+            </div>
+          `
+            )
+            .join("");
+        } else {
+          searchResults.innerHTML = `
+            <div class="alert alert-info">
+              No results found for "${query}". Please try a different search term.
+            </div>
+          `;
+        }
+      }
+    </script>
+  </body>
+</html>

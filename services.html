@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Expertise - PPEA</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="font-montserrat bg-light">
+    <!-- Top Bar with Contact Info -->
+    <div class="top-bar py-2">
+      <div class="container">
+        <div class="d-flex justify-content-end align-items-center">
+          <div class="contact-info d-flex align-items-center gap-3">
+            <a href="mailto:probitypartnersea1@gmail.com" class="contact-link">
+              <i class="bi bi-envelope-fill"></i>
+              <span>probitypartnersea1@gmail.com</span>
+            </a>
+            <a href="tel:+250791676618" class="contact-link">
+              <i class="bi bi-telephone-fill"></i>
+              <span>+250 791 676 618/ +250 788 561 313</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header fixed-top" role="banner">
+      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="/" aria-label="PPEA Home">
+            <img
+              src="assets/logo4.png"
+              alt="PPEA Logo"
+              class="logo-img"
+              width="180"
+              height="48"
+            />
+          </a>
+
+          <!-- Mobile Toggle Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation Content -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Main Menu -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/" aria-current="page">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+
+              <!-- Practice Areas Menu Item -->
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Practice Areas</a>
+              </li>
+
+              <!-- Our People Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="ourPeopleDropdown"
+                >
+                  Our People
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="ourPeopleDropdown">
+                  <li>
+                    <a class="dropdown-item" href="attorneys.html">Attorneys</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="consultants.html">Consultants</a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Resources Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="resourcesDropdown"
+                >
+                  Resources
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                  <li>
+                    <a class="dropdown-item" href="/resources/cases">Cases</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/resources/brochures">Brochures</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/resources/reports">Reports</a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Blog Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="blogDropdown"
+                >
+                  Blog
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                  <li>
+                    <a class="dropdown-item" href="/blog/news">News</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/blog/articles">Articles</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <!-- Search and CTA -->
+            <div class="d-flex align-items-center gap-3">
+              <!-- Search Button -->
+              <button
+                class="btn search-btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#searchModal"
+                aria-label="Search"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+
+              <!-- CTA Button -->
+              <a href="/consultation" class="btn cta-button" role="button">
+                Consult with Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero d-flex align-items-center justify-content-center services-hero" style="height: 40vh; min-height: 300px; position: relative; margin-top: 0;">
+        <div class="about-hero-background">
+          <img src="assets/services-hero.jpg" alt="Our Expertise Hero" class="about-hero-image" />
+          <div class="about-hero-overlay"></div>
+        </div>
+        <div class="container text-center about-hero-content" style="position: relative; z-index: 2;">
+          <h1 class="about-hero-title">Our Expertise</h1>
+          <p class="about-hero-subtitle">Explore our comprehensive legal services and practice areas</p>
+        </div>
+      </section>
+      <!-- Practice Areas Grid -->
+      <section class="services-list py-5">
+        <div class="container">
+          <div class="row g-4">
+            <!-- Banking and Finance -->
+            <div class="col-md-6 col-lg-4">
+              <div class="service-detail-card h-100">
+                <div class="service-detail-icon"><i class="bi bi-bank"></i></div>
+                <h3>Banking and Finance</h3>
+                <p>We provide our clients with banking and financial legal support through handling legal issues that may arise from contractual legal binds associated with loans and borrowing. We provide regulatory and licensing advice to our clients, as well as procurement and drafting of standard form documentation. We draft and prepare all types of legal documentation that our client may require, ensure that all legal procedural requirements are met, and issue legal opinions on any matter that our client may require legal guidance on.</p>
+              </div>
+            </div>
+            <!-- Insurance -->
+            <div class="col-md-6 col-lg-4">
+              <div class="service-detail-card h-100">
+                <div class="service-detail-icon"><i class="bi bi-shield-check"></i></div>
+                <h3>Insurance</h3>
+                <p>We provide legal aid in terms of insurance law. Insurance law is the collection of laws and regulations that relate to insurance. Insurance is a contract between two parties. It transfers the risk of loss to the other party to the contract in exchange for a fee called a premium.</p>
+              </div>
+            </div>
+            <!-- Labour and Administration -->
+            <div class="col-md-6 col-lg-4">
+              <div class="service-detail-card h-100">
+                <div class="service-detail-icon"><i class="bi bi-people"></i></div>
+                <h3>Labour and Administration</h3>
+                <p>With the ever-expanding labour market, managing relationships between employer and employee is a dire necessity. Probity Partners East Africa provides a variety of labour law services, such as preparing, negotiating, and reviewing employment contracts on our clients' behalf. We represent our clients in courts of law, at the labour Inspectorate, and in any other institution where they may require legal assistance. It is a priority to us to provide legal services with the aim of safeguarding our clients' administrative, employment and labour rights.</p>
+              </div>
+            </div>
+            <!-- Contracts -->
+            <div class="col-md-6 col-lg-4">
+              <div class="service-detail-card h-100">
+                <div class="service-detail-icon"><i class="bi bi-file-earmark-text"></i></div>
+                <h3>Contracts</h3>
+                <p>Contract related legal assistance is a service desired by most of our clients, both legal persons and individuals; as the exchange of services and goods grows, so does the demand for contractual services. PPEA offers contractual legal services to our clients by drafting and preparing, negotiating, and analysing contracts of all types on their behalf, as well as representing them in court for any cause arising from a contractual agreement.</p>
+              </div>
+            </div>
+            <!-- Taxation -->
+            <div class="col-md-6 col-lg-4">
+              <div class="service-detail-card h-100">
+                <div class="service-detail-icon"><i class="bi bi-percent"></i></div>
+                <h3>Taxation</h3>
+                <p>PPEA offers a comprehensive variety of tax services to handle the issues of international trade and commercial operations. We assist our clients in dealing with the complex issues of international and domestic commerce, commercial operations, as well as managing and resolving tax disputes. Since our clients may face complicated tax difficulties in both their home country and the jurisdictions in which they do business, PPEA provides services that incorporate both knowledge of national legislation, and the relevant international treaties. PPEA draws on its knowledge in a wide range of legal disciplines, including intellectual property and technology, corporate and finance, real estate, contract, labour, and administrative law, to name a few in order to effectively provide the necessary legal services to our client.</p>
+              </div>
+            </div>
+            <!-- Corporate and Commercial Law -->
+            <div class="col-md-6 col-lg-4">
+              <div class="service-detail-card h-100">
+                <div class="service-detail-icon"><i class="bi bi-briefcase"></i></div>
+                <h3>Corporate and Commercial Law</h3>
+                <p>We provide corporate and commercial legal services to our client through the drafting and preparing of all types of legal documentation that our client may require, ensure that all legal procedural requirements are met, and issue legal opinions on any matter that our client may require legal guidance on and abiding to legal principles applied in the world of business for both persons and entities.</p>
+              </div>
+            </div>
+            <!-- Energy and Infrastructure -->
+            <div class="col-md-6 col-lg-4">
+              <div class="service-detail-card h-100">
+                <div class="service-detail-icon"><i class="bi bi-lightning-charge"></i></div>
+                <h3>Energy and Infrastructure</h3>
+                <p>We provide legal assistance and representation in matters of energy law, infrastructure finance, transport, and oil and energy to name a few. PPEA understands the commercial, strategic, technical, geographical, and political elements that define and impact these industries, as well as the business difficulties that come with working in these sector. In order to efficiently deliver the essential legal services to our client, PPEA draws on its experience in a wide range of legal disciplines including commercial law, corporate and finance, energy law, real estate, contract, labour, and administrative law, to name a few, in order to effectively provide the necessary legal services to our client.</p>
+              </div>
+            </div>
+            <!-- Human Rights Law -->
+            <div class="col-md-6 col-lg-4">
+              <div class="service-detail-card h-100">
+                <div class="service-detail-icon"><i class="bi bi-universal-access"></i></div>
+                <h3>Human Rights Law</h3>
+                <p>We provide legal aid in terms of human rights law. Human Rights Law exists to help protect our rights as human beings. These human rights are the basic freedoms that every person should be entitled to from birth until death.</p>
+              </div>
+            </div>
+            <!-- Family Law -->
+            <div class="col-md-6 col-lg-4">
+              <div class="service-detail-card h-100">
+                <div class="service-detail-icon"><i class="bi bi-people-fill"></i></div>
+                <h3>Family Law</h3>
+                <p>We provide legal aid in terms of family law. Family Law focuses on finding solutions to issues relating to often complex legal relationships. These include marriage and parenthood among others.</p>
+              </div>
+            </div>
+            <!-- Notarisation, Research, and Legalisation of Documents -->
+            <div class="col-md-6 col-lg-4">
+              <div class="service-detail-card h-100">
+                <div class="service-detail-icon"><i class="bi bi-journal-check"></i></div>
+                <h3>Notarisation, Research, and Legalisation of Documents</h3>
+                <p>PPEA team has a certified and qualified private notary. With this we can offer notary services as well as legalisation of documents to our clients. This service is an official fraud-deterrent process that assures the parties of a transaction that a document is authentic, and can be trusted.</p>
+              </div>
+            </div>
+            <!-- Criminal Law -->
+            <div class="col-md-6 col-lg-4">
+              <div class="service-detail-card h-100">
+                <div class="service-detail-icon"><i class="bi bi-shield-lock"></i></div>
+                <h3>Criminal Law</h3>
+                <p>We provide legal aid in terms of criminal law. Criminal law aims to deter and punish conduct which is perceived as threatening, harmful or endangering to the public, its property or moral welfare.</p>
+              </div>
+            </div>
+            <!-- Registration of Intellectual Property (IP) -->
+            <div class="col-md-6 col-lg-4">
+              <div class="service-detail-card h-100">
+                <div class="service-detail-icon"><i class="bi bi-patch-check"></i></div>
+                <h3>Registration of Intellectual Property (IP)</h3>
+                <p>PPEA offers specialized services in the registration of Intellectual Property. Our team is equipped to assist clients with registering trademarks, patents, copyrights, and designs, ensuring legal protection for their innovative ideas and creative works. This service helps safeguard intellectual assets by granting exclusive rights to the owner, preventing unauthorized use or infringement, and providing peace of mind in both local and international markets.</p>
+              </div>
+            </div>
+            <!-- Support to Government Institutions, CSOs, Private Sector, and Individuals -->
+            <div class="col-12">
+              <div class="service-detail-card h-100">
+                <div class="service-detail-icon"><i class="bi bi-globe2"></i></div>
+                <h3>Support to Government Institutions, CSOs, Private Sector, and Individuals</h3>
+                <p>We also offer support to government institutions, CSOs, Private sector and individuals in the following areas:
+                  <ul>
+                    <li>Access to Justice</li>
+                    <li>Alternative Dispute Resolution</li>
+                    <li>Surveys and research in good governance, human rights</li>
+                    <li>Litigation in all fields of law</li>
+                    <li>Capacity building and institutional development (access to justice, rule of law, human rights, good governance, case management and backlogs, advocacy and lobbying)</li>
+                    <li>Project management</li>
+                    <li>Establishing paralegal programmes/networks</li>
+                    <li>Monitoring and Evaluation of access to justice and legal aid projects/programmes</li>
+                    <li>Development of human rights education materials</li>
+                    <li>Justice & Security sector reform</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- CTA Section -->
+    <section class="cta-section py-5 text-white text-center" style="background: #505081;">
+      <div class="container">
+        <h2 class="mb-4">Ready to take the next step?</h2>
+        <p class="mb-4">Contact us today to discuss your legal needs or schedule a consultation with our expert team.</p>
+        <div class="cta-buttons d-flex flex-column flex-md-row justify-content-center gap-3">
+          <a href="/consultation" class="btn btn-primary btn-lg">Book a Consultation</a>
+          <a href="/contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer py-5 bg-dark text-white">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <img src="assets/logo4.png" alt="PPEA Logo" class="footer-logo mb-4" />
+            <p>Providing exceptional legal services across East Africa with unmatched dedication and expertise.</p>
+            <div class="social-section mt-4">
+              <h6 class="text-white mb-3">Get in touch with us</h6>
+              <div class="social-icons d-flex gap-3">
+                <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Practice Areas</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5>Practice Areas</h5>
+            <ul class="list-unstyled">
+              <li><a href="services.html#insurance">Insurance</a></li>
+              <li><a href="services.html#contracts">Contracts</a></li>
+              <li><a href="services.html#labour">Labour & Administration</a></li>
+              <li><a href="services.html#real-estate">Real Estate</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-geo-alt"></i> KG 17 Ave, Kigali, Rwanda</li>
+              <li><i class="bi bi-telephone"></i> +250 791 676 618</li>
+              <li><i class="bi bi-envelope"></i> probitypartnersea1@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row">
+          <div class="col-md-6">
+            <p class="mb-0">&copy; 2024 Probity Partners East Africa. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="/privacy" class="text-white me-3">Privacy Policy</a>
+            <a href="/terms" class="text-white">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="searchModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="searchModalLabel">Search</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="search-form" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Search..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-primary" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <!-- Initialize Bootstrap Components -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize all dropdowns
+        var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+        var dropdownList = dropdownElementList.map(function(dropdownToggleEl) {
+          return new bootstrap.Dropdown(dropdownToggleEl);
+        });
+
+        // Initialize AOS
+        AOS.init();
+      });
+    </script>
+  </body>
+</html> 

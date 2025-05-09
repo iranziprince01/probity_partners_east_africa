@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Consultants - PPEA</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body class="font-montserrat">
+    <!-- Top Bar with Contact Info -->
+    <div class="top-bar py-2">
+      <div class="container">
+        <div class="d-flex justify-content-end align-items-center">
+          <div class="contact-info d-flex align-items-center gap-3">
+            <a
+              href="mailto:probitypartnersea1@gmail.com"
+              class="contact-link"
+              style="color: white !important; text-decoration: none"
+            >
+              <i class="bi bi-envelope-fill" style="color: white"></i>
+              <span style="color: white">probitypartnersea1@gmail.com</span>
+            </a>
+            <a
+              href="tel:+250791676618"
+              class="contact-link"
+              style="color: white !important; text-decoration: none"
+            >
+              <i class="bi bi-telephone-fill" style="color: white"></i>
+              <span style="color: white"
+                >+250 791 676 618/ +250 788 561 313</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include the same header as index.html -->
+    <header class="header fixed-top" role="banner">
+      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="/" aria-label="PPEA Home">
+            <img
+              src="assets/logo4.png"
+              alt="PPEA Logo"
+              class="logo-img"
+              width="180"
+              height="48"
+            />
+          </a>
+
+          <!-- Mobile Toggle Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation Content -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Main Menu -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+
+              <!-- Practice Areas Menu Item -->
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Practice Areas</a>
+              </li>
+
+              <!-- Our People Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Our People
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="ourPeopleDropdown">
+                  <li>
+                    <a class="dropdown-item" href="attorneys.html">Attorneys</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="consultants.html"
+                      >Consultants</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Resources Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Resources
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                  <li>
+                    <a class="dropdown-item" href="/resources/cases">Cases</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/resources/brochures"
+                      >Brochures</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/resources/reports"
+                      >Reports</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Blog Dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Blog
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                  <li>
+                    <a class="dropdown-item" href="/blog/news">News</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/blog/articles">Articles</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <!-- Search and CTA -->
+            <div class="d-flex align-items-center gap-3">
+              <!-- Search Button -->
+              <button
+                class="btn search-btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#searchModal"
+                aria-label="Search"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+
+              <!-- CTA Button -->
+              <a href="/consultation" class="btn cta-button" role="button">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Consultants Hero Section -->
+    <section
+      class="consultants-hero py-5"
+      style="
+        margin-top: 0;
+        background-image: url('assets/hero-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      "
+    >
+      <div
+        class="overlay"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.5);
+        "
+      ></div>
+      <div class="container position-relative" style="z-index: 1">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center text-white">
+            <h1 class="display-4 mb-4">Our Consultants</h1>
+            <p class="lead">
+              Meet our team of skilled consultants who bring specialized
+              expertise and innovative solutions to support our clients' needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultants Grid Section -->
+    <section class="consultants-grid py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Consultant 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="consultant-card" data-aos="fade-up">
+              <div class="consultant-image">
+                <img
+                  src="assets/001.jpg"
+                  alt="Me Laurence Murenzi Rwiha"
+                  class="img-fluid"
+                />
+                <div class="consultant-overlay">
+                  <div class="consultant-social">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Email">
+                      <i class="bi bi-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="consultant-content">
+                <h3>Me Laurence Murenzi Rwiha</h3>
+                <p class="consultant-title">Business and Banking Lawyer</p>
+                <p class="consultant-bio">
+                  Me Laurence MURENZI RWIHA is an experienced Business and
+                  Banking Lawyer in various fields of the Banking sector. He was
+                  the Senior Legal Counsel in charge of Project Finance at the
+                  Development Bank of Rwanda (BRD Plc). BRD is the only
+                  Development Financial Institution (DFI) in Rwanda with a
+                  mandate of financing big and impactful projects to the Rwandan
+                  economy, ranging from Energy, Affordable housing, Export
+                  Promotion, Agriculture, and other special projects like
+                  Hospitals, Schools, and public markets to mention but a few.
+                </p>
+                <p class="consultant-qualifications">
+                  <strong>Qualifications:</strong> Master's of International
+                  Economics and Business Law, Bachelor's Degree in Law
+                </p>
+                <div class="consultant-contact">
+                  <a href="tel:+250791676618" class="contact-link">
+                    <i class="bi bi-telephone"></i> +250 791 676 618
+                  </a>
+                  <a
+                    href="mailto:probitypartnersea1@gmail.com"
+                    class="contact-link"
+                  >
+                    <i class="bi bi-envelope"></i> probitypartnersea1@gmail.com
+                  </a>
+                </div>
+                <a
+                  href="consultants/laurence-murenzi.html"
+                  class="btn"
+                  style="background-color: #1a237e; color: white"
+                  >View Full Profile</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Consultant 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="consultant-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="consultant-image">
+                <img
+                  src="assets/MUTABINGWA Alloys.jpg"
+                  alt="Me MUTABINGWA Alloys"
+                  class="img-fluid"
+                />
+                <div class="consultant-overlay">
+                  <div class="consultant-social">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Email">
+                      <i class="bi bi-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="consultant-content">
+                <h3>Me MUTABINGWA Alloys</h3>
+                <p class="consultant-title">
+                  Taxation and Commercial Law Expert
+                </p>
+                <p class="consultant-bio">
+                  MUTABINGWA Alloys is a Lawyer by Profession, and holds diploma
+                  in management (UK Inland Revenue Management Institute); a
+                  Master's Degree in Business Law (University of Rwanda), Post
+                  Graduate Diploma in Legal Practice (DLP) from the Institute of
+                  Legal Practice Development (ILPD), has been an advocate for
+                  the past 10 years.
+                </p>
+                <p class="consultant-specialties">
+                  <strong>Specialties:</strong> Taxation Law, Transactions,
+                  Mergers, Commercial and Banking Cases
+                </p>
+                <div class="consultant-contact">
+                  <a href="tel:+250791676618" class="contact-link">
+                    <i class="bi bi-telephone"></i> +250 791 676 618
+                  </a>
+                  <a
+                    href="mailto:probitypartnersea1@gmail.com"
+                    class="contact-link"
+                  >
+                    <i class="bi bi-envelope"></i> probitypartnersea1@gmail.com
+                  </a>
+                </div>
+                <a
+                  href="consultants/mutabingwa-alloys.html"
+                  class="btn"
+                  style="background-color: #1a237e; color: white"
+                  >View Full Profile</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Consultant 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="consultant-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="consultant-image">
+                <img
+                  src="assets/KAYITANA Evode.jpeg"
+                  alt="Dr. KAYITANA Evode"
+                  class="img-fluid"
+                />
+                <div class="consultant-overlay">
+                  <div class="consultant-social">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Email">
+                      <i class="bi bi-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="consultant-content">
+                <h3>Dr. KAYITANA Evode</h3>
+                <p class="consultant-title">
+                  International Criminal Law Expert
+                </p>
+                <p class="consultant-bio">
+                  Dr. Kayitana Evode is a seasoned legal expert with extensive
+                  experience in criminal law, international criminal procedure,
+                  and consultancy services. He holds a Doctor of Laws (LLD) in
+                  International Criminal Law from North-West University, South
+                  Africa, alongside a Master of Laws (LLM) in Criminal Law and
+                  Criminal Procedure from the University of South Africa.
+                </p>
+                <p class="consultant-achievements">
+                  <strong>Experience:</strong> Advocate with the Rwanda Bar
+                  Association, Former Dean of the Faculty of Law, Extensive
+                  consultancy work for prestigious organizations, Author of
+                  significant publications in international law
+                </p>
+                <div class="consultant-contact">
+                  <a href="tel:+250791676618" class="contact-link">
+                    <i class="bi bi-telephone"></i> +250 791 676 618
+                  </a>
+                  <a
+                    href="mailto:probitypartnersea1@gmail.com"
+                    class="contact-link"
+                  >
+                    <i class="bi bi-envelope"></i> probitypartnersea1@gmail.com
+                  </a>
+                </div>
+                <a
+                  href="consultants/kayitana-evode.html"
+                  class="btn"
+                  style="background-color: #1a237e; color: white"
+                  >View Full Profile</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="cta-section py-5 bg-primary text-white"
+      aria-label="Call to Action"
+    >
+      <div class="container text-center">
+        <h2 class="section-title text-white mb-4" data-aos="fade-up">
+          Ready to Work With Us?
+        </h2>
+        <p
+          class="section-subtitle text-white mb-4"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Let's discuss how we can help you achieve your legal objectives.
+        </p>
+        <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+          <a href="/contact" class="btn btn-light btn-lg me-3">Contact Us</a>
+          <a href="/consultation" class="btn btn-outline-light btn-lg"
+            >Book a Consultation</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <img
+              src="assets/logo4.png"
+              alt="PPEA Logo"
+              class="footer-logo mb-4"
+            />
+            <p>
+              Providing exceptional legal services across East Africa with
+              unmatched dedication and expertise.
+            </p>
+            <div class="social-section mt-4">
+              <h6 class="text-white mb-3">Get in touch with us</h6>
+              <div class="social-icons d-flex gap-3">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Facebook">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Twitter">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="/">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Practice Areas</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5>Practice Areas</h5>
+            <ul class="list-unstyled">
+              <li><a href="/practice/corporate">Insurance</a></li>
+              <li><a href="/practice/litigation">Contracts</a></li>
+              <li>
+                <a href="/practice/real-estate">Labour & Administration</a>
+              </li>
+              <li><a href="/practice/intellectual-property">Real Estate</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-geo-alt"></i> KG 17 Ave, Kigali, Rwanda</li>
+              <li><i class="bi bi-telephone"></i> +250 791 676 618</li>
+              <li>
+                <i class="bi bi-envelope"></i> probitypartnersea1@gmail.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row">
+          <div class="col-md-6">
+            <p class="mb-0">
+              &copy; 2024 Probity Partners East Africa. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="/privacy" class="text-white me-3">Privacy Policy</a>
+            <a href="/terms" class="text-white">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="searchModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="searchModalLabel">Search</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="search-form" role="search">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control"
+                  placeholder="Search..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-primary" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
