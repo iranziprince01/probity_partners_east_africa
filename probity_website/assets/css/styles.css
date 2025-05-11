@@ -1,0 +1,26 @@
+/* Top Navigation Centered */
+.top-nav {
+  background-color: #003366;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.top-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 2rem;
+}
+
+.top-nav ul li a {
+  color: #FFFAFA;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+  color: #D3D3D3;
+}
