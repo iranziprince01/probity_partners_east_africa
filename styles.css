@@ -3,6 +3,7 @@
   --midnight-blue: #0f0e47;
   --white: #ffffff;
   --black: #000000;
+  --light-gray: #f8f9fa; /* Added for light backgrounds */
   --transition-speed: 0.3s;
   --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   --border-radius: 8px;
@@ -16,20 +17,92 @@ body {
 
 /* Top Bar */
 .top-bar {
-  background-color: rgba(15, 14, 71, 0.95);
+  background-color: var(--light-gray); /* Initial light background */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1031; /* Above the header */
+  transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
+}
+
+.top-bar.top-bar-scrolled {
+  background-color: rgba(15, 14, 71, 0.95); /* Dark background when scrolled */
+}
+
+.top-bar .contact-link,
+.top-bar .contact-link span {
+  /* Targeting the span as well */
+  color: var(--midnight-blue) !important; /* Initial dark text */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-speed) ease;
+  opacity: 0.9;
+}
+
+.top-bar.top-bar-scrolled .contact-link,
+.top-bar.top-bar-scrolled .contact-link span {
+  /* Targeting the span as well */
+  color: var(--white) !important; /* White text when scrolled */
+  opacity: 0.9;
+}
+
+.top-bar .contact-link i {
+  color: var(
+    --midnight-blue
+  ) !important; /* Initial dark icon color, added !important */
+  font-size: 1rem;
+}
+
+.top-bar.top-bar-scrolled .contact-link i {
+  color: var(
+    --white
+  ) !important; /* White icon color when scrolled, added !important */
+}
+
+.top-bar .contact-link:hover,
+.top-bar .contact-link:hover span,
+.top-bar .contact-link:hover i {
+  color: var(
+    --midnight-blue
+  ) !important; /* Keep midnight blue on hover for initial state */
+  opacity: 1;
+}
+
+.top-bar.top-bar-scrolled .contact-link:hover,
+.top-bar.top-bar-scrolled .contact-link:hover span,
+.top-bar.top-bar-scrolled .contact-link:hover i {
+  color: var(--white) !important; /* Keep white on hover for scrolled state */
+  opacity: 1;
+}
+
+/* General style for contact link icons if not already present elsewhere under .contact-link i */
+.contact-link i {
+  font-size: 1rem;
+  /* other base styles for icon if needed, but color is handled by specific states above */
+}
+
+.top-bar .contact-link span {
+  white-space: nowrap;
 }
 
 /* Header Styles */
 .header {
-  background-color: var(--midnight-blue);
+  background-color: #e6e6e6; /* UPDATED: Initial light gray background */
   box-shadow: var(--box-shadow);
-  transition: all var(--transition-speed) ease;
-  top: 40px; /* Position below top bar */
+  transition: background-color var(--transition-speed) ease,
+    top var(--transition-speed) ease;
+  top: 40px; /* Position below top bar - adjust if top-bar height changes */
+  position: fixed; /* Ensure it's fixed for scroll effects */
+  width: 100%;
+  z-index: 1030;
+}
+
+.header.header-scrolled {
+  background-color: var(--midnight-blue); /* Dark background when scrolled */
 }
 
 .navbar {
@@ -40,13 +113,44 @@ body {
 .logo-img {
   height: 48px;
   width: auto;
-  transition: transform var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease,
+    opacity var(--transition-speed) ease;
   margin-right: 2rem;
   margin-left: -1rem; /* Push logo to the left */
 }
 
+/* --- DEBUG STYLES START --- */
+.header.header-scrolled {
+  /* border: 3px solid blue !important; */ /* DEBUG: Blue border when header is scrolled - REMOVED */
+}
+
+/* .header .logo-initial { */
+/* border: 2px solid red !important; */ /* DEBUG: Red border for initial logo - REMOVED */
+/* } */
+
+/* .header .logo-scrolled { */
+/* border: 2px solid limegreen !important; */ /* DEBUG: Green border for scrolled logo - REMOVED */
+/* } */
+/* --- DEBUG STYLES END --- */
+
 .logo-img:hover {
   transform: scale(1.05);
+}
+
+/* Initial state: show logo-initial (Logo5.png), hide logo-scrolled (logo4.png) */
+.header .logo-initial {
+  display: inline-block !important;
+}
+.header .logo-scrolled {
+  display: none !important;
+}
+
+/* Scrolled state: hide logo-initial, show logo-scrolled */
+.header.header-scrolled .logo-initial {
+  display: none !important;
+}
+.header.header-scrolled .logo-scrolled {
+  display: inline-block !important;
 }
 
 /* Navigation */
@@ -56,7 +160,7 @@ body {
 }
 
 .nav-link {
-  color: var(--white) !important;
+  color: var(--midnight-blue) !important; /* Initial dark link color */
   font-weight: 500;
   position: relative;
   padding: 0.5rem 1rem !important;
@@ -71,9 +175,17 @@ body {
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: var(--white);
+  background-color: var(--midnight-blue); /* Initial dark underline */
   transition: all var(--transition-speed) ease;
   transform: translateX(-50%);
+}
+
+.header.header-scrolled .nav-link {
+  color: var(--white) !important; /* White link color when scrolled */
+}
+
+.header.header-scrolled .nav-link::after {
+  background-color: var(--white); /* White underline when scrolled */
 }
 
 .nav-link:hover::after,
@@ -120,11 +232,15 @@ body {
 
 /* Search Button */
 .search-btn {
-  color: var(--white);
+  color: var(--midnight-blue); /* Initial dark search icon color */
   background: transparent;
   border: none;
   padding: 0.5rem;
   transition: all var(--transition-speed) ease;
+}
+
+.header.header-scrolled .search-btn {
+  color: var(--white); /* White search icon color when scrolled */
 }
 
 .search-btn:hover,
@@ -153,8 +269,8 @@ body {
 
 /* CTA Button */
 .cta-button {
-  background: var(--white);
-  color: var(--midnight-blue) !important;
+  background: var(--midnight-blue); /* Initial dark background for CTA */
+  color: var(--white) !important; /* Initial white text for CTA */
   font-weight: 600;
   padding: 0.5rem 1.25rem;
   border-radius: 50px;
@@ -162,11 +278,27 @@ body {
   transition: all var(--transition-speed) ease;
 }
 
+.header.header-scrolled .cta-button {
+  background: var(--white); /* White background for CTA when scrolled */
+  color: var(--midnight-blue) !important; /* Dark text for CTA when scrolled */
+}
+
 .cta-button:hover,
 .cta-button:focus {
-  background: rgba(255, 255, 255, 0.9);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(15, 14, 71, 0.2);
+}
+
+/* Initial state hover */
+.cta-button:hover {
+  background: #0b0a37; /* Darker shade of midnight-blue */
+  color: var(--white) !important;
+}
+
+/* Scrolled state hover */
+.header.header-scrolled .cta-button:hover {
+  background: #f0f0f0; /* Slightly darker white */
+  color: var(--midnight-blue) !important;
 }
 
 /* Mobile Menu */
@@ -180,7 +312,11 @@ body {
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230f0e47' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Initial dark toggler */
+}
+
+.header.header-scrolled .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* White toggler when scrolled */
 }
 
 /* Contact Information */
@@ -246,7 +382,7 @@ body {
   }
 
   .dropdown-item {
-    color: var(--white);
+    color: var(--midnight-blue) !important;
   }
 
   .dropdown-item:hover,
@@ -986,64 +1122,6 @@ body {
   color: #666;
 }
 
-/* Testimonials Section */
-.testimonial-card {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  height: 100%;
-}
-
-.testimonial-content {
-  position: relative;
-  padding: 1rem 0;
-  margin-bottom: 1.5rem;
-}
-
-.testimonial-content i {
-  color: var(--midnight-blue);
-  font-size: 2rem;
-  opacity: 0.2;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.testimonial-content p {
-  color: #666;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin: 0;
-  padding-left: 2rem;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.testimonial-image {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.testimonial-info h4 {
-  color: var(--midnight-blue);
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.testimonial-info p {
-  color: #666;
-  font-size: 0.9rem;
-  margin: 0;
-}
-
 /* CTA Section */
 .cta-section {
   background: #505081 !important;
@@ -1097,6 +1175,36 @@ body {
   text-overflow: ellipsis;
 }
 
+/* Footer Social Icons Styling */
+.footer .social-icons .social-icon {
+  display: inline-flex; /* Use inline-flex to allow sizing and flex properties */
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  border: 1px solid #fff; /* White border */
+  border-radius: 50%; /* Makes it circular */
+  color: #fff; /* Icon color */
+  text-decoration: none;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  font-size: 1.2rem; /* Adjust icon size if necessary */
+}
+
+.footer .social-icons .social-icon:hover {
+  background-color: #fff; /* White background on hover */
+  color: #343a40; /* Dark icon color on hover (Bootstrap's bg-dark color) */
+  border-color: #fff; /* Keep border color consistent or change as desired */
+}
+
+.footer .social-icons .social-icon i {
+  line-height: 1; /* Helps with vertical alignment of some icons */
+}
+
+/* Ensure the h6 title for social icons has some margin if needed */
+.footer .social-section h6 {
+  margin-bottom: 1rem; /* Or adjust as preferred */
+}
+
 /* Responsive Styles for About Page */
 @media (max-width: 991.98px) {
   .about-hero {
@@ -1147,8 +1255,7 @@ body {
 
   .mission-card,
   .vision-card,
-  .value-card,
-  .testimonial-card {
+  .value-card {
     padding: 1.5rem;
   }
 
@@ -1526,23 +1633,22 @@ body {
 .feature-icon {
   width: 70px;
   height: 70px;
-  background: var(--midnight-blue);
+  background: linear-gradient(135deg, var(--midnight-blue), #505081);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
-  transition: all var(--transition-speed) ease;
+  transition: transform 0.4s ease;
 }
 
 .feature-icon i {
-  font-size: 1.75rem;
-  color: var(--white);
+  font-size: 28px;
+  color: white;
 }
 
 .feature-card:hover .feature-icon {
-  transform: scale(1.1);
-  background: var(--midnight-blue);
+  transform: scale(1.1) rotate(5deg);
 }
 
 .feature-card h3 {
@@ -1575,7 +1681,7 @@ body {
   }
 
   .feature-icon i {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 }
 
@@ -2265,5 +2371,479 @@ body {
   .why-choose-us,
   .attorneys-section {
     margin-bottom: 3rem;
+  }
+}
+
+/* Footer Newsletter Form Styling */
+.footer .input-group {
+  position: relative;
+  border-radius: 30px; /* Rounded container for the whole group */
+  overflow: hidden; /* To ensure children conform to border-radius */
+  border: 1px solid rgba(255, 255, 255, 0.6); /* More visible white border for the group */
+  display: flex; /* Ensures items align correctly */
+}
+
+.footer .input-group .form-control {
+  background-color: #ffffff; /* White background for the input field */
+  border: none;
+  color: var(
+    --midnight-blue
+  ); /* Dark text for readability on white background */
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 30px 0 0 30px; /* Rounded on the left */
+  box-shadow: none;
+  flex-grow: 1; /* Allow input to take available space */
+}
+
+.footer .input-group .form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+  font-size: 0.9rem;
+}
+
+.footer .input-group .form-control:focus {
+  background-color: #ffffff;
+  color: var(--midnight-blue);
+  box-shadow: 0 0 0 0.2rem rgba(15, 14, 71, 0.25);
+}
+
+.footer .input-group #button-addon2.btn-primary {
+  background-color: var(
+    --midnight-blue
+  ); /* Dark blue background for the button */
+  color: #ffffff; /* White text on the button */
+  border: 1px solid var(--midnight-blue); /* Button border matches its background */
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 0 30px 30px 0; /* Rounded on the right */
+  transition: all 0.3s ease;
+}
+
+.footer .input-group #button-addon2.btn-primary:hover {
+  background-color: #0b0a37; /* Darker shade of midnight-blue on hover */
+  border-color: #0b0a37;
+  color: #ffffff;
+  transform: none; /* Removing scale to keep it simple, can be added back if desired */
+}
+
+/* Get in Touch Section Styling */
+.get-in-touch-section {
+  background-color: var(--midnight-blue); /* Or a different modern background */
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+}
+
+.get-in-touch-section .section-title {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.get-in-touch-section .section-subtitle {
+  color: var(--light-gray);
+  margin-bottom: 3rem;
+}
+
+.contact-form .form-label {
+  color: var(--light-gray);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  border-radius: 0.375rem; /* Standard Bootstrap rounding */
+  padding: 0.75rem 1rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--white);
+  box-shadow: none; /* Remove Bootstrap default focus shadow if desired */
+}
+
+.contact-form .invalid-feedback {
+  color: #ffc107; /* A lighter error color for dark background */
+  font-size: 0.875em;
+}
+
+.contact-form .btn.cta-button-form {
+  background-color: var(--white);
+  color: var(--midnight-blue);
+  border: 2px solid var(--white);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 50px; /* Pill shape */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form .btn.cta-button-form:hover {
+  background-color: transparent;
+  color: var(--white);
+}
+
+/* Styling for the Country Code select */
+.contact-form #countryCode.form-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3E%3Cpath fill-rule='evenodd' d='M8 10.414l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 10.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  padding-right: 2.5rem; /* Make space for the arrow */
+}
+
+/* Set color for options in the country code dropdown */
+.contact-form #countryCode.form-select option {
+  color: var(--midnight-blue);
+  background-color: var(
+    --white
+  ); /* Ensure options have a solid background if needed */
+}
+
+/* Ensure the input group looks cohesive */
+.contact-form .input-group .form-control {
+  border-left: 0; /* Remove left border of the phone input when preceded by select */
+}
+
+.contact-form .input-group .form-select {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.contact-form .input-group .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Ensure error messages are styled consistently */
+.error-message {
+  color: #ffc107; /* Consistent with invalid-feedback */
+  font-size: 0.875em;
+  margin-top: 0.25rem;
+  display: block; /* Ensure it takes its own line */
+  width: 100%;
+}
+
+/* Reduce space around Footer Newsletter title */
+.footer .col-lg-3 h5.mt-4 {
+  margin-top: 0.25rem !important; /* Significantly reduced top margin */
+  margin-bottom: 0.25rem !important; /* Significantly reduced bottom margin for minimal space */
+}
+
+/* Scroll to Top Button (In-Footer Version) */
+.scroll-top {
+  width: 44px;
+  height: 44px;
+  background-color: var(--midnight-blue);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+}
+
+.scroll-top i {
+  font-size: 1.8rem;
+  color: var(--white);
+  line-height: 1;
+}
+
+.scroll-top:hover {
+  background-color: #0b0a37;
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-top:focus,
+.scroll-top:active {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(15, 14, 71, 0.5);
+}
+
+/* Client Showcase Section */
+.client-showcase {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.client-showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--midnight-blue),
+    #505081,
+    var(--midnight-blue)
+  );
+}
+
+.client-category-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  height: 100%;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(15, 14, 71, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.client-category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--midnight-blue), #505081);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.client-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(15, 14, 71, 0.15);
+}
+
+.client-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--midnight-blue), #505081);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+
+.client-category-card:hover .client-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.client-icon i {
+  font-size: 28px;
+  color: white;
+}
+
+.client-category-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: var(--midnight-blue);
+  font-weight: 600;
+}
+
+.client-category-card p {
+  color: #666;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Client Logos Carousel */
+.client-logos {
+  margin-top: 60px;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, #f8f9fa, transparent);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, #f8f9fa, transparent);
+}
+
+.marquee {
+  display: flex;
+  animation: scroll 40s linear infinite;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.client-logo {
+  flex: 0 0 auto;
+  width: 160px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(15, 14, 71, 0.08);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(15, 14, 71, 0.1);
+}
+
+.client-logo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(15, 14, 71, 0.15);
+}
+
+.client-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: all 0.4s ease;
+  opacity: 0.8;
+}
+
+.client-logo:hover img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .client-category-card {
+    padding: 20px;
+  }
+
+  .client-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .client-icon i {
+    font-size: 24px;
+  }
+
+  .client-logo {
+    width: 140px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .client-showcase {
+    padding: 40px 0;
+  }
+
+  .client-logo {
+    width: 120px;
+    height: 70px;
+  }
+}
+
+/* Modern Identity Statement Section */
+.identity-statement-modern {
+  background: linear-gradient(120deg, #f8f9fa 60%, #e6e6f6 100%);
+  position: relative;
+  overflow: hidden;
+}
+.identity-story-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(15, 14, 71, 0.08);
+  position: relative;
+  z-index: 2;
+}
+.vertical-accent-bar {
+  width: 6px;
+  height: 320px;
+  background: linear-gradient(180deg, #0f0e47 0%, #505081 100%);
+  border-radius: 8px;
+  margin: auto;
+}
+.identity-features-timeline {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(15, 14, 71, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.feature-timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  min-height: 72px;
+}
+.feature-icon {
+  width: 54px;
+  min-width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.7rem;
+  color: #fff;
+  background: linear-gradient(135deg, #0f0e47, #505081);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.feature-timeline-item h5 {
+  margin-bottom: 0.25rem;
+  margin-top: 0;
+}
+.feature-timeline-item > div:last-child {
+  flex: 1;
+  min-width: 0;
+}
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #0f0e47, #505081) !important;
+}
+@media (max-width: 991.98px) {
+  .vertical-accent-bar {
+    display: none;
+  }
+  .identity-story-card,
+  .identity-features-timeline {
+    border-radius: 1rem;
   }
 }

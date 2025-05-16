@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Team - PPEA</title>
 
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/UMULISA Alice.jpg" as="image" />
+    <link rel="preload" href="assets/001.jpg" as="image" />
+    <link rel="preload" href="assets/002.jpg" as="image" />
+    <link rel="preload" href="assets/003.jpg" as="image" />
+    <link rel="preload" href="assets/004.jpg" as="image" />
+    <link rel="preload" href="assets/005.jpg" as="image" />
+    <link rel="preload" href="assets/KAYITANA Evode.jpeg" as="image" />
+    <link rel="preload" href="assets/MUTABINGWA Alloys.jpg" as="image" />
+    <link rel="preload" href="assets/KUBWAYO GAKWAYA Rhodam.jpeg" as="image" />
+    <link rel="preload" href="assets/KEZA Lys.jpeg" as="image" />
+    <link rel="preload" href="assets/BAKUNDA Emmanuel.jpg" as="image" />
+    <link rel="preload" href="assets/services-hero.jpg" as="image" />
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="apple-touch-icon" href="assets/favicon.png" />
@@ -37,173 +51,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body class="font-montserrat">
-    <!-- Top Bar with Contact Info -->
-    <div class="top-bar py-2">
-      <div class="container">
-        <div class="d-flex justify-content-end align-items-center">
-          <div class="contact-info d-flex align-items-center gap-3">
-            <a
-              href="mailto:probitypartnersea1@gmail.com"
-              class="contact-link"
-              style="color: white !important; text-decoration: none"
-            >
-              <i class="bi bi-envelope-fill" style="color: white"></i>
-              <span style="color: white">probitypartnersea1@gmail.com</span>
-            </a>
-            <a
-              href="tel:+250791676618"
-              class="contact-link"
-              style="color: white !important; text-decoration: none"
-            >
-              <i class="bi bi-telephone-fill" style="color: white"></i>
-              <span style="color: white"
-                >+250 791 676 618/ +250 788 561 313</span
-              >
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Header -->
-    <header class="header fixed-top" role="banner" style="margin-bottom: 0">
-      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
-        <div class="container">
-          <!-- Logo -->
-          <a class="navbar-brand" href="/" aria-label="PPEA Home">
-            <img
-              src="assets/logo4.png"
-              alt="PPEA Logo"
-              class="logo-img"
-              width="180"
-              height="48"
-            />
-          </a>
-
-          <!-- Mobile Toggle Button -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarContent"
-            aria-controls="navbarContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- Navigation Content -->
-          <div class="collapse navbar-collapse" id="navbarContent">
-            <!-- Main Menu -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="/" aria-current="page">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-
-              <!-- Practice Areas Menu Item -->
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Practice Areas</a>
-              </li>
-
-              <!-- Our People Dropdown -->
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  id="ourPeopleDropdown"
-                >
-                  Our People
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="ourPeopleDropdown">
-                  <li>
-                    <a class="dropdown-item" href="attorneys.html">Attorneys</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="consultants.html"
-                      >Consultants</a
-                    >
-                  </li>
-                </ul>
-              </li>
-
-              <!-- Resources Dropdown -->
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  id="resourcesDropdown"
-                >
-                  Resources
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
-                  <li>
-                    <a class="dropdown-item" href="/resources/brochures"
-                      >Brochures</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/resources/reports"
-                      >Reports</a
-                    >
-                  </li>
-                </ul>
-              </li>
-
-              <!-- Blog Dropdown -->
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  id="blogDropdown"
-                >
-                  Blog
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="blogDropdown">
-                  <li>
-                    <a class="dropdown-item" href="/blog/news">News</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/blog/articles">Articles</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-
-            <!-- Search and CTA -->
-            <div class="d-flex align-items-center gap-3">
-              <!-- Search Button -->
-              <button
-                class="btn search-btn"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#searchModal"
-                aria-label="Search"
-              >
-                <i class="bi bi-search"></i>
-              </button>
-
-              <!-- CTA Button -->
-              <a href="/consultation" class="btn cta-button" role="button">
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <!-- Team Hero Section -->
     <section
@@ -230,10 +78,18 @@
       </div>
     </section>
 
-    <!-- Attorneys Section -->
-    <section class="attorneys-section py-5">
+    <!-- Team Section -->
+    <section class="team-section py-5">
       <div class="container">
-        <h2 class="section-title mb-5">Our Attorneys</h2>
+        <!-- Attorneys Section -->
+        <div class="section-header text-center mb-5">
+          <h2 class="section-title" data-aos="fade-up">Our Attorneys</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Meet our experienced team of attorneys who bring expertise and
+            dedication to every case.
+          </p>
+        </div>
+
         <div class="row g-4">
           <!-- Attorney 1 -->
           <div class="col-md-6 col-lg-4">
@@ -242,7 +98,8 @@
                 <img
                   src="assets/UMULISA Alice.jpg"
                   alt="Me Alice Umulisa Kayigamba"
-                  class="img-fluid rounded-3 shadow-lg"
+                  class="img-fluid"
+                  loading="lazy"
                 />
                 <div class="attorney-overlay">
                   <div class="attorney-social">
@@ -258,36 +115,15 @@
               <div class="attorney-content">
                 <h3>Me Alice Umulisa Kayigamba</h3>
                 <p class="attorney-title">Managing Partner</p>
-                <p class="attorney-qualifications">
-                  Bachelor's Degree in Law, Postgraduate Diploma in Legal
-                  Practice (ILPD)
-                </p>
                 <p class="attorney-bio">
-                  Me Alice Umulisa Kayigamba is our Managing Partner. She holds
-                  an LLB from the Independent University of Kigali (ULK) and a
-                  diploma in legal practice from ILPD. She heads the litigation
-                  and Legal Advisory Unit. She has extensive experience in
-                  criminal investigation techniques, over 6 years experience in
-                  legal advisory services to the criminal investigation
-                  department of the national police of Rwanda. She has a lot of
-                  experience in modern policing techniques, gender based
-                  violence (GBV) and counselling. She is an expert in inter –
-                  country extradition procedures and rogatory commissions.
+                  Me Alice Umulisa Kayigamba is the Managing Partner at Probity
+                  Partners East Africa. With extensive experience in corporate
+                  law and strategic legal counsel, she leads our firm with
+                  vision and expertise.
                 </p>
-                <p class="attorney-specialties">
-                  <strong>Specialties:</strong> Family law, rape and GBV cases,
-                  administrative matters, human rights, company law and criminal
-                  matters in general.
-                </p>
-                <div class="attorney-contact">
-                  <a href="tel:+250791676618" class="contact-link">
-                    <i class="bi bi-telephone"></i>
-                    <span>+250 791 676 618</span>
-                  </a>
-                  <a href="mailto:attorney@example.com" class="contact-link">
-                    <i class="bi bi-envelope"></i>
-                    <span>attorney@example.com</span>
-                  </a>
+                <div class="attorney-specialties">
+                  <span>Corporate Law</span>
+                  <span>Strategic Legal Counsel</span>
                 </div>
                 <a
                   href="attorneys/alice-umulisa.html"
@@ -305,7 +141,8 @@
                 <img
                   src="assets/001.jpg"
                   alt="Dr. Me Rene Munyamahoro"
-                  class="img-fluid rounded-3 shadow-lg"
+                  class="img-fluid"
+                  loading="lazy"
                 />
                 <div class="attorney-overlay">
                   <div class="attorney-social">
@@ -321,29 +158,15 @@
               <div class="attorney-content">
                 <h3>Dr. Me Rene Munyamahoro</h3>
                 <p class="attorney-title">Senior Advocate</p>
-                <p class="attorney-qualifications">
-                  PHD's Degree in Philosophy of Law, Postgraduate Diploma in
-                  Legal Practice (ILPD)
-                </p>
                 <p class="attorney-bio">
-                  Dr. Me Rene MUNYAMAHORO has been in Law sector for over ten
-                  years and has expressed an extensive experience in Commercial
-                  Law transactions, Investment law transactions and Labour law
-                  transactions. He has been a lecturer of law at the National
-                  University and handling all the clients requests with success.
-                  Currently he is a visiting lecture at the independent
-                  University of Kigali where he teaches the module of investment
-                  law. He is a Senior Lawyer in the Rwanda bar association.
+                  Dr. Me Rene Munyamahoro brings extensive experience in
+                  corporate law and strategic legal counsel to our team. His
+                  expertise in business law and commercial litigation has made
+                  him a trusted advisor to many leading organizations.
                 </p>
-                <div class="attorney-contact">
-                  <a href="tel:+250791676618" class="contact-link">
-                    <i class="bi bi-telephone"></i>
-                    <span>+250 791 676 618</span>
-                  </a>
-                  <a href="mailto:attorney@example.com" class="contact-link">
-                    <i class="bi bi-envelope"></i>
-                    <span>attorney@example.com</span>
-                  </a>
+                <div class="attorney-specialties">
+                  <span>Corporate Law</span>
+                  <span>Business Law</span>
                 </div>
                 <a
                   href="attorneys/rene-munyamahoro.html"
@@ -361,7 +184,8 @@
                 <img
                   src="assets/002.jpg"
                   alt="Me Serugo Jean Baptiste"
-                  class="img-fluid rounded-3 shadow-lg"
+                  class="img-fluid"
+                  loading="lazy"
                 />
                 <div class="attorney-overlay">
                   <div class="attorney-social">
@@ -377,30 +201,18 @@
               <div class="attorney-content">
                 <h3>Me Serugo Jean Baptiste</h3>
                 <p class="attorney-title">Senior Advocate</p>
-                <p class="attorney-qualifications">
-                  Master's Degree in Human rights and constitutional Law,
-                  Postgraduate Diploma in Legal Practice (ILPD)
-                </p>
                 <p class="attorney-bio">
-                  Me Serugo Jean Baptiste has been in Law sector for over ten
-                  years and has expressed an extensive experience in Commercial
-                  Law transactions, and Labour law transactions. He has been a
-                  lecturer of law at the University of Rwanda. He possess an
-                  unmatched way of handling all the clients requests that leads
-                  to success.
+                  Me Serugo Jean Baptiste specializes in corporate law and
+                  strategic legal counsel. His deep understanding of business
+                  law and commercial litigation has made him an invaluable asset
+                  to our team.
                 </p>
-                <div class="attorney-contact">
-                  <a href="tel:+250791676618" class="contact-link">
-                    <i class="bi bi-telephone"></i>
-                    <span>+250 791 676 618</span>
-                  </a>
-                  <a href="mailto:attorney@example.com" class="contact-link">
-                    <i class="bi bi-envelope"></i>
-                    <span>attorney@example.com</span>
-                  </a>
+                <div class="attorney-specialties">
+                  <span>Corporate Law</span>
+                  <span>Business Law</span>
                 </div>
                 <a
-                  href="attorneys/serugo-jean.html"
+                  href="attorneys/jean-baptiste.html"
                   class="btn btn-primary mt-3"
                   >View Full Profile</a
                 >
@@ -415,7 +227,8 @@
                 <img
                   src="assets/003.jpg"
                   alt="Me Rwabigwi Ruhunga Augustin"
-                  class="img-fluid rounded-3 shadow-lg"
+                  class="img-fluid"
+                  loading="lazy"
                 />
                 <div class="attorney-overlay">
                   <div class="attorney-social">
@@ -431,27 +244,15 @@
               <div class="attorney-content">
                 <h3>Me Rwabigwi Ruhunga Augustin</h3>
                 <p class="attorney-title">Senior Advocate</p>
-                <p class="attorney-qualifications">
-                  Bachelor's Degree in Law, Postgraduate Diploma in Legal
-                  Practice (ILPD)
-                </p>
                 <p class="attorney-bio">
-                  Me Rwabigwi Ruhunga Augustin is a practicing Lawyer,
-                  registered with Rwanda Bar Association since 2013. He has
-                  extensive experience in Commercial Law transactions, and
-                  Labour law transactions. He holds a Diploma in Legal practice
-                  from the Institute of legal practice and development of Rwanda
-                  (ILDP).
+                  Me Rwabigwi Ruhunga Augustin brings extensive experience in
+                  corporate law and strategic legal counsel. His expertise in
+                  business law and commercial litigation has made him a trusted
+                  advisor to many leading organizations.
                 </p>
-                <div class="attorney-contact">
-                  <a href="tel:+250791676618" class="contact-link">
-                    <i class="bi bi-telephone"></i>
-                    <span>+250 791 676 618</span>
-                  </a>
-                  <a href="mailto:attorney@example.com" class="contact-link">
-                    <i class="bi bi-envelope"></i>
-                    <span>attorney@example.com</span>
-                  </a>
+                <div class="attorney-specialties">
+                  <span>Corporate Law</span>
+                  <span>Business Law</span>
                 </div>
                 <a
                   href="attorneys/rwabigwi-ruhunga.html"
@@ -469,7 +270,8 @@
                 <img
                   src="assets/004.jpg"
                   alt="Me Mutimura B. Patrick"
-                  class="img-fluid rounded-3 shadow-lg"
+                  class="img-fluid"
+                  loading="lazy"
                 />
                 <div class="attorney-overlay">
                   <div class="attorney-social">
@@ -486,20 +288,14 @@
                 <h3>Me Mutimura B. Patrick</h3>
                 <p class="attorney-title">Senior Advocate</p>
                 <p class="attorney-bio">
-                  Me Patrick has over 7 years of experience as an advocate in
-                  Rwanda and in the region. He specialises in corporate law. He
-                  holds an LLB from NUR and Masters degree in corporate law from
-                  UNISA, South Africa.
+                  Me Mutimura B. Patrick specializes in corporate law and
+                  strategic legal counsel. His deep understanding of business
+                  law and commercial litigation has made him an invaluable asset
+                  to our team.
                 </p>
-                <div class="attorney-contact">
-                  <a href="tel:+250791676618" class="contact-link">
-                    <i class="bi bi-telephone"></i>
-                    <span>+250 791 676 618</span>
-                  </a>
-                  <a href="mailto:attorney@example.com" class="contact-link">
-                    <i class="bi bi-envelope"></i>
-                    <span>attorney@example.com</span>
-                  </a>
+                <div class="attorney-specialties">
+                  <span>Corporate Law</span>
+                  <span>Business Law</span>
                 </div>
                 <a
                   href="attorneys/mutimura-patrick.html"
@@ -517,7 +313,8 @@
                 <img
                   src="assets/005.jpg"
                   alt="Me Gilbert Ndayambaje"
-                  class="img-fluid rounded-3 shadow-lg"
+                  class="img-fluid"
+                  loading="lazy"
                 />
                 <div class="attorney-overlay">
                   <div class="attorney-social">
@@ -533,26 +330,15 @@
               <div class="attorney-content">
                 <h3>Me Gilbert Ndayambaje</h3>
                 <p class="attorney-title">Senior Advocate</p>
-                <p class="attorney-qualifications">
-                  Master's Degree in Public International Law, Postgraduate
-                  Diploma in Legal Practice (ILPD)
-                </p>
                 <p class="attorney-bio">
-                  Me. Gilbert is a practicing Lawyer, registered with Rwanda Bar
-                  Association since 2013. He has extensive experience in
-                  Commercial Law transactions, and Labour law transactions. He
-                  holds a Diploma in Legal practice from the Institute of legal
-                  practice and development of Rwanda (ILDP).
+                  Me Gilbert Ndayambaje brings extensive experience in corporate
+                  law and strategic legal counsel. His expertise in business law
+                  and commercial litigation has made him a trusted advisor to
+                  many leading organizations.
                 </p>
-                <div class="attorney-contact">
-                  <a href="tel:+250791676618" class="contact-link">
-                    <i class="bi bi-telephone"></i>
-                    <span>+250 791 676 618</span>
-                  </a>
-                  <a href="mailto:attorney@example.com" class="contact-link">
-                    <i class="bi bi-envelope"></i>
-                    <span>attorney@example.com</span>
-                  </a>
+                <div class="attorney-specialties">
+                  <span>Corporate Law</span>
+                  <span>Business Law</span>
                 </div>
                 <a
                   href="attorneys/gilbert-ndayambaje.html"
@@ -563,22 +349,173 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Team Members Section -->
-    <section class="team-members-section py-5 bg-light">
-      <div class="container">
-        <h2 class="section-title mb-5">Our Team Members</h2>
+        <!-- Consultants Section -->
+        <div class="section-header text-center mb-5 mt-5">
+          <h2 class="section-title" data-aos="fade-up">Our Consultants</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Meet our expert consultants who provide specialized knowledge and
+            insights.
+          </p>
+        </div>
+
         <div class="row g-4">
-          <!-- Team Member 1 -->
+          <!-- Consultant 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="attorney-card" data-aos="fade-up">
+              <div class="attorney-image">
+                <img
+                  src="assets/001.jpg"
+                  alt="Laurence Murenzi Rwiha"
+                  class="img-fluid"
+                  loading="lazy"
+                />
+                <div class="attorney-overlay">
+                  <div class="attorney-social">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Email">
+                      <i class="bi bi-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="attorney-content">
+                <h3>Me Laurence Murenzi Rwiha</h3>
+                <p class="attorney-title">Business and Banking Lawyer</p>
+                <p class="attorney-bio">
+                  Me Laurence MURENZI RWIHA is an experienced Business and
+                  Banking Lawyer in various fields of the Banking sector. He was
+                  the Senior Legal Counsel in charge of Project Finance at the
+                  Development Bank of Rwanda (BRD Plc).
+                </p>
+                <div class="attorney-specialties">
+                  <span>Project Finance</span>
+                  <span>Banking Law</span>
+                  <span>Business Law</span>
+                  <span>Commercial Transactions</span>
+                </div>
+                <a
+                  href="consultants/laurence-murenzi.html"
+                  class="btn btn-primary mt-3"
+                  >View Full Profile</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Consultant 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="attorney-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="attorney-image">
+                <img
+                  src="assets/KAYITANA Evode.jpeg"
+                  alt="Dr. KAYITANA Evode"
+                  class="img-fluid"
+                  loading="lazy"
+                />
+                <div class="attorney-overlay">
+                  <div class="attorney-social">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Email">
+                      <i class="bi bi-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="attorney-content">
+                <h3>Dr. KAYITANA Evode</h3>
+                <p class="attorney-title">International Criminal Law Expert</p>
+                <p class="attorney-bio">
+                  Dr. KAYITANA Evode is a distinguished International Criminal
+                  Law Expert with extensive experience in criminal law and
+                  consultancy. He has served as the Dean of the Faculty of Law
+                  and is a recognized advocate with the Rwanda Bar Association.
+                </p>
+                <div class="attorney-specialties">
+                  <span>International Criminal Law</span>
+                  <span>Criminal Law Consultancy</span>
+                  <span>Legal Education</span>
+                  <span>Advocacy</span>
+                </div>
+                <a
+                  href="consultants/kayitana-evode.html"
+                  class="btn btn-primary mt-3"
+                  >View Full Profile</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Consultant 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="attorney-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="attorney-image">
+                <img
+                  src="assets/MUTABINGWA Alloys.jpg"
+                  alt="MUTABINGWA Alloys"
+                  class="img-fluid"
+                  loading="lazy"
+                />
+                <div class="attorney-overlay">
+                  <div class="attorney-social">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Email">
+                      <i class="bi bi-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="attorney-content">
+                <h3>Me MUTABINGWA Alloys</h3>
+                <p class="attorney-title">Taxation and Commercial Law Expert</p>
+                <p class="attorney-bio">
+                  Me MUTABINGWA Alloys is a distinguished Taxation and
+                  Commercial Law Expert with a strong background in management
+                  and business law. With over 10 years of experience in
+                  advocacy, he has established himself as a leading expert in
+                  his field.
+                </p>
+                <div class="attorney-specialties">
+                  <span>Taxation Law</span>
+                  <span>Commercial Transactions</span>
+                  <span>Mergers and Acquisitions</span>
+                  <span>Banking Cases</span>
+                </div>
+                <a
+                  href="consultants/mutabingwa-alloys.html"
+                  class="btn btn-primary mt-3"
+                  >View Full Profile</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Operations Team Section -->
+        <div class="section-header text-center mb-5 mt-5">
+          <h2 class="section-title" data-aos="fade-up">Operations Team</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Meet our dedicated operations team that keeps our firm running
+            smoothly.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Operations Team Member 1 -->
           <div class="col-md-6 col-lg-4">
             <div class="attorney-card" data-aos="fade-up">
               <div class="attorney-image">
                 <img
                   src="assets/KUBWAYO GAKWAYA Rhodam.jpeg"
                   alt="KUBWAYO GAKWAYA Rhodam"
-                  class="img-fluid rounded-3 shadow-lg"
+                  class="img-fluid"
+                  loading="lazy"
                 />
                 <div class="attorney-overlay">
                   <div class="attorney-social">
@@ -593,41 +530,22 @@
               </div>
               <div class="attorney-content">
                 <h3>KUBWAYO GAKWAYA Rhodam</h3>
-                <p class="attorney-title">Managing Associate</p>
-                <p class="attorney-qualifications">
-                  Bachelor of Laws, Master's in International Economics and
-                  Business Law
-                </p>
+                <p class="attorney-title">Operations Manager</p>
                 <p class="attorney-bio">
-                  KUBWAYO GAKWAYA Rhodam graduated from the University of Rwanda
-                  with a Bachelor of Laws degree in 2021. She also possesses a
-                  Master's degree in International economics and Business law
-                  from Kigali independent University. Rhodam's day-to-day roles
-                  at the firm include, case management but are not limited to,
-                  drafting/reviewing transactional documents such as Facility
-                  Agreements, security agreements, compliance and liaising with
-                  regulators, preparing legal opinions in relation to
-                  transactional matters and other Rwandan law matters.
+                  Rhodam is our Operations Manager, responsible for overseeing
+                  the day-to-day operations of the firm. With extensive
+                  experience in legal practice and operations management, she
+                  ensures that our team delivers exceptional service to our
+                  clients.
                 </p>
-                <p class="attorney-specialties">
-                  <strong>Languages:</strong> French, English, Kinyarwanda
-                  (native)
-                </p>
-                <div class="attorney-contact">
-                  <a href="tel:+250791676618" class="contact-link">
-                    <i class="bi bi-telephone"></i>
-                    <span>+250 791 676 618</span>
-                  </a>
-                  <a
-                    href="mailto:probitypartnersea1@gmail.com"
-                    class="contact-link"
-                  >
-                    <i class="bi bi-envelope"></i>
-                    <span>probitypartnersea1@gmail.com</span>
-                  </a>
+                <div class="attorney-specialties">
+                  <span>Operations Management</span>
+                  <span>Legal Practice</span>
+                  <span>Team Leadership</span>
+                  <span>Client Service</span>
                 </div>
                 <a
-                  href="attorneys/kubwayo-gakwaya.html"
+                  href="operations-team/kubwayo-gakwaya.html"
                   class="btn btn-primary mt-3"
                   >View Full Profile</a
                 >
@@ -635,14 +553,15 @@
             </div>
           </div>
 
-          <!-- Team Member 2 -->
+          <!-- Operations Team Member 2 -->
           <div class="col-md-6 col-lg-4">
             <div class="attorney-card" data-aos="fade-up" data-aos-delay="100">
               <div class="attorney-image">
                 <img
                   src="assets/KEZA Lys.jpeg"
-                  alt="KEZA Lys NTAGANDA"
-                  class="img-fluid rounded-3 shadow-lg"
+                  alt="Keza Lys"
+                  class="img-fluid"
+                  loading="lazy"
                 />
                 <div class="attorney-overlay">
                   <div class="attorney-social">
@@ -656,53 +575,34 @@
                 </div>
               </div>
               <div class="attorney-content">
-                <h3>KEZA Lys NTAGANDA</h3>
-                <p class="attorney-title">Junior Associate</p>
-                <p class="attorney-qualifications">
-                  Bachelor of Laws, Diploma in Legal Practice (ILPD)
-                </p>
+                <h3>Keza Lys</h3>
+                <p class="attorney-title">Operations Assistant</p>
                 <p class="attorney-bio">
-                  Keza Ntaganda Lys began working for Probity Partners East
-                  Africa (PPEA) in 2018 as a junior associate and is now the
-                  operations manager. She holds a Bachelor of Laws degree from
-                  the National University of Rwanda and is currently enrolled in
-                  the Rwanda Institute of Legal Practice and Development
-                  pursuing a Diploma in Legal Practice. She has worked on both
-                  civil and criminal cases, with a focus on commercial and
-                  contract matters.
+                  Keza is our Operations Assistant, providing crucial support to
+                  ensure smooth operations and excellent client service.
                 </p>
-                <p class="attorney-specialties">
-                  <strong>Expertise:</strong> Project Management, Humanitarian
-                  Work, Access to Justice
-                </p>
-                <div class="attorney-contact">
-                  <a href="tel:+250791676618" class="contact-link">
-                    <i class="bi bi-telephone"></i>
-                    <span>+250 791 676 618</span>
-                  </a>
-                  <a
-                    href="mailto:probitypartnersea1@gmail.com"
-                    class="contact-link"
-                  >
-                    <i class="bi bi-envelope"></i>
-                    <span>probitypartnersea1@gmail.com</span>
-                  </a>
+                <div class="attorney-specialties">
+                  <span>Administrative Support</span>
+                  <span>Client Service</span>
                 </div>
-                <a href="attorneys/keza-lys.html" class="btn btn-primary mt-3"
+                <a
+                  href="operations-team/keza-lys.html"
+                  class="btn btn-primary mt-3"
                   >View Full Profile</a
                 >
               </div>
             </div>
           </div>
 
-          <!-- Team Member 3 -->
+          <!-- Operations Team Member 3 -->
           <div class="col-md-6 col-lg-4">
             <div class="attorney-card" data-aos="fade-up" data-aos-delay="200">
               <div class="attorney-image">
                 <img
                   src="assets/BAKUNDA Emmanuel.jpg"
-                  alt="BAKUNDA Emmanuel"
-                  class="img-fluid rounded-3 shadow-lg"
+                  alt="Bakunda Emmanuel"
+                  class="img-fluid"
+                  loading="lazy"
                 />
                 <div class="attorney-overlay">
                   <div class="attorney-social">
@@ -716,40 +616,19 @@
                 </div>
               </div>
               <div class="attorney-content">
-                <h3>BAKUNDA Emmanuel</h3>
-                <p class="attorney-title">Corporate Associate Lawyer</p>
-                <p class="attorney-qualifications">
-                  Bachelor of Laws, Diploma in Legal Practice (ILPD)
-                </p>
+                <h3>Bakunda Emmanuel</h3>
+                <p class="attorney-title">Operations Assistant</p>
                 <p class="attorney-bio">
-                  BAKUNDA Emmanuel is an ambitious Corporate Associate Lawyer
-                  with a diverse educational background. He obtained his
-                  Bachelor's Degree in Law from the esteemed University of
-                  Rwanda, where he laid the foundation for his legal career.
-                  Following his undergraduate studies, Emmanuel pursued a
-                  Diploma in Legal Practice at the Institute of Legal Practice
-                  and Development, acquiring practical skills and knowledge in
-                  legal matters.
+                  Bakunda Emmanuel is our Operations Assistant, providing
+                  essential support to ensure smooth operations and excellent
+                  client service.
                 </p>
-                <p class="attorney-specialties">
-                  <strong>Expertise:</strong> Corporate Law, Legal Drafting,
-                  Intellectual Property Rights
-                </p>
-                <div class="attorney-contact">
-                  <a href="tel:+250791676618" class="contact-link">
-                    <i class="bi bi-telephone"></i>
-                    <span>+250 791 676 618</span>
-                  </a>
-                  <a
-                    href="mailto:probitypartnersea1@gmail.com"
-                    class="contact-link"
-                  >
-                    <i class="bi bi-envelope"></i>
-                    <span>probitypartnersea1@gmail.com</span>
-                  </a>
+                <div class="attorney-specialties">
+                  <span>Administrative Support</span>
+                  <span>Client Service</span>
                 </div>
                 <a
-                  href="attorneys/bakunda-emmanuel.html"
+                  href="operations-team/bakunda-emmanuel.html"
                   class="btn btn-primary mt-3"
                   >View Full Profile</a
                 >
@@ -760,167 +639,15 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section
-      class="cta-section py-5 bg-primary text-white"
-      aria-label="Call to Action"
-    >
-      <div class="container text-center">
-        <h2 class="section-title text-white mb-4" data-aos="fade-up">
-          Ready to Work With Us?
-        </h2>
-        <p
-          class="section-subtitle text-white mb-4"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          Let's discuss how we can help you achieve your legal objectives.
-        </p>
-        <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
-          <a href="/contact" class="btn btn-light btn-lg me-3">Contact Us</a>
-          <a href="/consultation" class="btn btn-outline-light btn-lg"
-            >Book a Consultation</a
-          >
-        </div>
-      </div>
-    </section>
+    <div id="get-in-touch-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
-    <!-- Footer -->
-    <footer class="footer py-5 bg-dark text-white">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <img
-              src="assets/logo4.png"
-              alt="PPEA Logo"
-              class="footer-logo mb-4"
-            />
-            <p>
-              Providing exceptional legal services across East Africa with
-              unmatched dedication and expertise.
-            </p>
-            <div class="social-section mt-4">
-              <h6 class="text-white mb-3">Get in touch with us</h6>
-              <div class="social-icons d-flex gap-3">
-                <a href="#" class="social-icon" aria-label="Instagram">
-                  <i class="bi bi-instagram"></i>
-                </a>
-                <a href="#" class="social-icon" aria-label="Facebook">
-                  <i class="bi bi-facebook"></i>
-                </a>
-                <a href="#" class="social-icon" aria-label="Twitter">
-                  <i class="bi bi-twitter-x"></i>
-                </a>
-                <a href="#" class="social-icon" aria-label="LinkedIn">
-                  <i class="bi bi-linkedin"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <h5>Quick Links</h5>
-            <ul class="list-unstyled">
-              <li><a href="/">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="services.html">Practice Areas</a></li>
-              <li><a href="/contact">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3">
-            <h5>Practice Areas</h5>
-            <ul class="list-unstyled">
-              <li><a href="/practice/corporate">Insurance</a></li>
-              <li><a href="/practice/litigation">Contracts</a></li>
-              <li>
-                <a href="/practice/real-estate">Labour & Administration</a>
-              </li>
-              <li><a href="/practice/intellectual-property">Real Estate</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3">
-            <h5>Contact Us</h5>
-            <ul class="list-unstyled">
-              <li><i class="bi bi-geo-alt"></i> KG 17 Ave, Kigali, Rwanda</li>
-              <li><i class="bi bi-telephone"></i> +250 791 676 618</li>
-              <li>
-                <i class="bi bi-envelope"></i> probitypartnersea1@gmail.com
-              </li>
-            </ul>
-          </div>
-        </div>
-        <hr class="my-4" />
-        <div class="row">
-          <div class="col-md-6">
-            <p class="mb-0">
-              &copy; 2024 Probity Partners East Africa. All rights reserved.
-            </p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <a href="/privacy" class="text-white me-3">Privacy Policy</a>
-            <a href="/terms" class="text-white">Terms of Service</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Search Modal -->
-    <div
-      class="modal fade"
-      id="searchModal"
-      tabindex="-1"
-      aria-labelledby="searchModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="searchModalLabel">Search</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form class="search-form" role="search">
-              <div class="input-group">
-                <input
-                  type="search"
-                  class="form-control"
-                  placeholder="Search..."
-                  aria-label="Search"
-                />
-                <button class="btn btn-primary" type="submit">
-                  <i class="bi bi-search"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bootstrap Bundle with Popper -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Custom JS -->
+    <!-- Template Main JS File -->
     <script src="script.js"></script>
-
-    <!-- Initialize Bootstrap Components -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Initialize all dropdowns
-        var dropdownElementList = [].slice.call(
-          document.querySelectorAll(".dropdown-toggle")
-        );
-        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-          return new bootstrap.Dropdown(dropdownToggleEl);
-        });
-
-        // Initialize AOS
-        AOS.init();
-      });
-    </script>
   </body>
 </html>
