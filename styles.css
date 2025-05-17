@@ -2430,9 +2430,11 @@ body {
 
 /* Get in Touch Section Styling */
 .get-in-touch-section {
-  background-color: var(--midnight-blue); /* Or a different modern background */
+  background-color: var(--midnight-blue);
   color: var(--white);
   font-family: "Montserrat", sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .get-in-touch-section .section-title {
@@ -2453,10 +2455,10 @@ body {
 
 .contact-form .form-control,
 .contact-form .form-select {
-  background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent white */
+  background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--white);
-  border-radius: 0.375rem; /* Standard Bootstrap rounding */
+  border-radius: 0.375rem;
   padding: 0.75rem 1rem;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
@@ -2470,11 +2472,11 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.5);
   color: var(--white);
-  box-shadow: none; /* Remove Bootstrap default focus shadow if desired */
+  box-shadow: none;
 }
 
 .contact-form .invalid-feedback {
-  color: #ffc107; /* A lighter error color for dark background */
+  color: #ffc107;
   font-size: 0.875em;
 }
 
@@ -2484,7 +2486,7 @@ body {
   border: 2px solid var(--white);
   padding: 0.75rem 1.5rem;
   font-weight: 600;
-  border-radius: 50px; /* Pill shape */
+  border-radius: 50px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -2502,20 +2504,18 @@ body {
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;
-  padding-right: 2.5rem; /* Make space for the arrow */
+  padding-right: 2.5rem;
 }
 
 /* Set color for options in the country code dropdown */
 .contact-form #countryCode.form-select option {
   color: var(--midnight-blue);
-  background-color: var(
-    --white
-  ); /* Ensure options have a solid background if needed */
+  background-color: var(--white);
 }
 
 /* Ensure the input group looks cohesive */
 .contact-form .input-group .form-control {
-  border-left: 0; /* Remove left border of the phone input when preceded by select */
+  border-left: 0;
 }
 
 .contact-form .input-group .form-select {
@@ -2530,10 +2530,10 @@ body {
 
 /* Ensure error messages are styled consistently */
 .error-message {
-  color: #ffc107; /* Consistent with invalid-feedback */
+  color: #ffc107;
   font-size: 0.875em;
   margin-top: 0.25rem;
-  display: block; /* Ensure it takes its own line */
+  display: block;
   width: 100%;
 }
 
